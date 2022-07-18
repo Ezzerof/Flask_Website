@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block title %}UWTSD{% endblock %} {% block content %}
+<h1 align="center">Staff records</h1>
+
+<form id="inputStaffRec" method="post" action="/add-staff">
+    <input type="text" name="StaffName" placeholder="Enter staff name...">
+    <input type="text" name="StaffRec" placeholder="Enter staff record...">
+    <input type="submit" value="Insert">
+</form>
+<table id="saffRecTable" border="5">
+    <tr>
+        <th>
+            Name, Surname
+        </th>
+        <th>
+            Records
+        </th>
+        {% for record in StaffRecords: %}
+    </tr>
+    <tr>
+        <form method="post" action="/update-staff">
+            <td>
+                <input type="hidden" name="id" value="{{ record[0] }}"/>
+                <input type="text" name="updateStaffName" value="{{ record[1] }}"/>
+            </td>
+            <td>
+                <input type="text" name="updateStaffRecord" value="{{ record[2] }}"/>
+            </td>
+            <td>
+                <input type="submit" name="saveOrDelete" value="Save">
+            </td>
+            <td>
+                <input type="submit" name="saveOrDelete" value="X">
+            </td>
+        </form>
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock %}

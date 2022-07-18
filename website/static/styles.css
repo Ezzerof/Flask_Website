@@ -1,0 +1,57 @@
+/* Modify the background color */
+#TopBar{
+	background-color: #053A57;
+	border-bottom: 1px solid #EEE;
+	height: 45px;
+	line-height: 44px;
+	font-size: 13px;
+}
+
+#home, #login, #logout, #signUp, #students_record, #staff_records, #lib_records{
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+#logo {
+    height: 50px;
+    float: right;
+}
+
+#StRec{
+    color: red;
+    vertical-align:bottom;
+}
+
+#studentRecTable, #saffRecTable{
+    margin-top: 15px;
+    margin-left: 28%;
+}
+
+#inputStudRec, #inputStaffRec{
+    margin-left: 30%;
+}
+
+#inputLibRec{
+    margin-top: 15px;
+    margin-left: 10%;
+}
+
+#libRecTable{
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+#footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 60px;
+   background: #053A57;
+}
+
+#copyright{
+    margin-top: 15px;
+    font-size: 25px;
+    color: #ffff;
+    text-align: center;
+}

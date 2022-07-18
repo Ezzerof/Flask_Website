@@ -1,0 +1,54 @@
+{% extends "base.html" %} {% block title %}UWTSD{% endblock %} {% block content %}
+<h1 align="center">Library records</h1>
+
+<form id="inputLibRec" method="post" action="/add-lib">
+    <input type="text" name="BookType" placeholder="Enter Book type...">
+    <input type="text" name="Author" placeholder="Enter Author...">
+    <input type="text" name="BookName" placeholder="Enter Book name...">
+    <input type="text" name="Year" placeholder="Enter Book year...">
+    <input type="submit" value="Add">
+</form>
+<table id="libRecTable" border="5">
+    <tr>
+        <th>
+            Type
+        </th>
+        <th>
+            Author
+        </th>
+        <th>
+            Book name
+        </th>
+        <th>
+            Year
+        </th>
+        {% for record in LibraryRecords: %}
+    </tr>
+    <tr>
+        <form method="post" action="/update-lib">
+            <td>
+                <input type="hidden" name="id" value="{{ record[0] }}"/>
+                <input type="text" name="updateType" value="{{ record[1] }}"/>
+            </td>
+            <td>
+                <input type="text" name="updateAuthor" value="{{ record[2] }}"/>
+            </td>
+            <td>
+                <input type="text" name="updateBookName" value="{{ record[3] }}"/>
+            </td>
+            <td>
+                <input type="text" name="updateYear" value="{{ record[4] }}"/>
+            </td>
+            <td>
+                <input type="submit" name="saveOrDelete" value="Save">
+            </td>
+            <td>
+                <input type="submit" name="saveOrDelete" value="X">
+            </td>
+        </form>
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock %}
