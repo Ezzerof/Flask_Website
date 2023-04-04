@@ -5,7 +5,7 @@
 * [Setup](#setup)
 
 ## General Info
-Simple website done in Python by using Flask, the requirement was to create a website in Flask that will do CRUD functionality for Staff and Students records.
+A simple website is done in Python by using Flask, the requirement was to create a website in Flask that will do CRUD functionality for Staff and Student records.
 
 ## Technologies
 * Python
